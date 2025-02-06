@@ -22,7 +22,7 @@ onMounted(async ()=> {
     try{
         const response = await axios.get("http://localhost:3000/api/jobs");
         // Simulate a 2-second delay
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         state.jobs = response.data;
     } catch (error) {
         console.error('Error fetching jobs:', error);
